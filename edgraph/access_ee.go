@@ -137,7 +137,7 @@ func (s *Server) authenticateLogin(ctx context.Context, request *api.LoginReques
 		}
 
 		if user == nil {
-			return nil, errors.Errorf("unable to authenticate through refresh token: "+
+			return nil, errors.Errorf("unable to authenticate through refresh token: " +
 				"invalid username or password")
 		}
 
@@ -154,7 +154,7 @@ func (s *Server) authenticateLogin(ctx context.Context, request *api.LoginReques
 	}
 
 	if user == nil {
-		return nil, errors.Errorf("unable to authenticate through password: "+
+		return nil, errors.Errorf("unable to authenticate through password: " +
 			"invalid username or passowrd")
 	}
 	if !user.PasswordMatch {
